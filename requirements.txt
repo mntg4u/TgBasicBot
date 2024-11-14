@@ -1,2 +1,3 @@
 PyroTGFork==2.1.32.15
 requests
+aiohttp
