@@ -1,4 +1,5 @@
 PyroTGFork==2.1.32.15
 TgCrypto
 requests
+bs4
 aiohttp
