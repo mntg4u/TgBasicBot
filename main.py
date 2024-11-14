@@ -1,6 +1,7 @@
 import requests
 import asyncio
 import aiohttp
+from bs4 import BeautifulSoup
 from pyrogram import Client, filters
 
 #My API ID , API HASH & BOT TOKEN
@@ -13,13 +14,20 @@ app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 async def fetch_facebook_posts():
     url = "https://m.facebook.com/mgu.ac.in/"
-    response = requests.get(url) 
+    response = requests.get(url)
     if response.status_code == 200:
-        return response.json().get('data', [])
+        soup = BeautifulSoup(response.text, 'html.parser')
+        posts = []
+        # Example: Find all post elements (you need to adjust the selectors based on the actual HTML structure)
+        for post in soup.find_all('div', class_='your-post-class'):
+            message = post.get_text()  # Extract the text
+            # You can also extract images or other data as needed
+            posts.append({'message': message})
+        return posts
     else:
         print("Failed to fetch posts:", response.status_code)
         return []
-
+        
 async def send_to_telegram(post):
     if 'message' in post:
         message = post['message']
