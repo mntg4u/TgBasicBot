@@ -8,6 +8,7 @@ api_id = "13666216"
 api_hash = "f3a456b486290011638fb4b312f9be70"
 bot_token = "6075431113:AAFV62rWzPN4PRIhGQN1Q6xaFYJ1b7lmR0U"
 POST_CHANNEL = -1002446673306
+admin = 5465110453
 app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 async def fetch_facebook_posts():
@@ -30,6 +31,7 @@ async def send_to_telegram(post):
 
 async def main():
     await app.start()
+    await app.send_message(chat_id=admin, text="**Bot is up now!** ✅")
     while True:
         posts = await fetch_facebook_posts()
         for post in posts:
@@ -37,5 +39,7 @@ async def main():
         await asyncio.sleep(60)  # Check for new posts every minute
     await app.stop()
 
+    
 if __name__ == "__main__":
-    asyncio.run(main())
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
