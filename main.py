@@ -1,6 +1,6 @@
 import requests
 import asyncio
-import aiohttp
+from aiohttp import web
 from bs4 import BeautifulSoup
 from pyrogram import Client, filters
 
@@ -10,8 +10,20 @@ api_hash = "f3a456b486290011638fb4b312f9be70"
 bot_token = "6075431113:AAFV62rWzPN4PRIhGQN1Q6xaFYJ1b7lmR0U"
 POST_CHANNEL = -1002446673306
 admin = 5465110453
+PORT = 8080
 app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
+routes = web.RouteTableDef()
+
+@routes.get("/", allow_head=True)
+async def root_route_handler(request):
+    return web.json_response("MG University Updater is Active!")
+    
+async def web_server():
+    web_app = web.Application(client_max_size=30000000)
+    web_app.add_routes(routes)
+    return web_app
+    
 async def fetch_facebook_posts():
     url = "https://m.facebook.com/mgu.ac.in/"
     response = requests.get(url)
@@ -39,6 +51,10 @@ async def send_to_telegram(post):
 
 async def main():
     await app.start()
+    bot = web.AppRunner(await web_server())
+        await bot.setup()
+        bind_address = "0.0.0.0"
+        await web.TCPSite(bot, bind_address, PORT).start()
     await app.send_message(chat_id=admin, text="**Bot is up now!** ✅")
     while True:
         posts = await fetch_facebook_posts()
