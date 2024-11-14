@@ -52,9 +52,9 @@ async def send_to_telegram(post):
 async def main():
     await app.start()
     bot = web.AppRunner(await web_server())
-        await bot.setup()
-        bind_address = "0.0.0.0"
-        await web.TCPSite(bot, bind_address, PORT).start()
+    await bot.setup()
+    bind_address = "0.0.0.0"
+    await web.TCPSite(bot, bind_address, PORT).start()
     await app.send_message(chat_id=admin, text="**Bot is up now!** ✅")
     while True:
         posts = await fetch_facebook_posts()
