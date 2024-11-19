@@ -13,7 +13,7 @@ APP_ID = int(os.environ.get("APP_ID", "13666216"))
 API_HASH = os.environ.get("API_HASH", "f3a456b486290011638fb4b312f9be70")
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", "2092454280"))
+OWNER_ID = int(os.environ.get("OWNER_ID", "5465110453"))
 
 #Port
 PORT = os.environ.get("PORT", "8080")
@@ -21,7 +21,7 @@ PORT = os.environ.get("PORT", "8080")
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #bot token
-TG_BOT_TOKEN = int(os.environ.get("TG_BOT_TOKEN", "6075431113:AAFV62rWzPN4PRIhGQN1Q6xaFYJ1b7lmR0U"))
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6075431113:AAFV62rWzPN4PRIhGQN1Q6xaFYJ1b7lmR0U")
 
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
