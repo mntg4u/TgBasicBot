@@ -4,9 +4,7 @@ import asyncio
 from bot import Bot
 from pyrogram import Client, filters
 
-CMD = ["rename", "r"]
-
-@Bot.on_message(filters.command(CMD) & filters.reply)
+@Bot.on_message(filters.command("rename") & filters.reply)
 async def handle_rename(client, message):
     if message.reply_to_message and message.reply_to_message.document:
         original_file_name = message.reply_to_message.document.file_name
