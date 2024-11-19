@@ -1,8 +1,10 @@
-import aiohttp
 import asyncio
 import os
+import aiohttp  # Import aiohttp for asynchronous HTTP requests
 from bot import Bot
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -16,8 +18,13 @@ async def download_studocu(studocu_link):
     # Set up Selenium webdriver
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')  # Run in headless mode (no GUI)
-    driver = webdriver.Chrome(options=options)
+    options.add_argument('--no-sandbox')  # Bypass OS security model
+    options.add_argument('--disable-dev-shm-usage')  # Overcome limited resource problems
+    options.add_argument('--disable-gpu')  # Applicable to Windows OS only
+    options.add_argument('--window-size=1920x1080')  # Set window size
 
+    # Use ChromeDriverManager to automatically manage ChromeDriver
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     try:
         # Navigate to the Studocu login page
         driver.get("https://www.studocu.com/en/login")
