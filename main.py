@@ -35,5 +35,4 @@ def upload_file(client, message):
     client.send_document(chat_id=message.chat.id, document="downloaded_file")
 
 if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(main())
+    app.run()
