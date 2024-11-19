@@ -1,6 +1,7 @@
 import os
 import subprocess
 import asyncio
+from bot import Bot
 from pyrogram import Client, filters
 
 async def convert_to_pdf(input_file):
@@ -14,7 +15,7 @@ async def convert_to_pdf(input_file):
         print(f"Error during conversion: {e}")
         return None
 
-@app.on_message(filters.command("pdf") & filters.reply)
+@Bot.on_message(filters.command("pdf") & filters.reply)
 async def handle_pdf_conversion(client, message):
     if message.reply_to_message and message.reply_to_message.document:
         file_id = message.reply_to_message.document.file_id
