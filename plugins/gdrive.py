@@ -38,10 +38,14 @@ async def upload_file(client, message):
     if len(message.command) < 2:
         await message.reply("Please provide a Google Drive link.")
         return
-
-    drive_link = message.command[1]  # Use message.command for better handling
+    
+    drive_link = message.command[1] 
     try:
+        upload_message = await message.reply("<code>Trying to Upload File from Google Drive...</code>")        
         filename = await download_file(drive_link)
         await client.send_document(chat_id=message.chat.id, document=f"Uploaded By @ExamVault{os.path.splitext(filename)[1]}")
+        await upload_message.delete()
+        await message.reply("<code>File Uploaded successfully ✅</code>")
+        
     except Exception as e:
         await message.reply(f"An error occurred: {str(e)}")
