@@ -1,6 +1,7 @@
 import aiohttp
 import asyncio
 import os
+from bot import Bot
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
