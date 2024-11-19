@@ -19,7 +19,9 @@ async def handle_rename(client, message):
         original_extension = os.path.splitext(original_file_name)[1]  
         renamed_file_path = os.path.join(os.path.dirname(original_file_path), f"{new_name}{original_extension}")
         os.rename(original_file_path, renamed_file_path)
-        await client.send_document(chat_id=message.chat.id, document=renamed_file_path)
+        thumb = "https://envs.sh/5UR.jpg"
+        caption = "<b><i>{new_name}\n\n© @ExamVault</i></b>"
+        await client.send_document(chat_id=message.chat.id, document=renamed_file_path, caption=caption, thumb=thumb)
         os.remove(renamed_file_path)
     else:
         await message.reply("❌ Please reply to a document with the /rename command.")
