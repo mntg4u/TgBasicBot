@@ -1,6 +1,7 @@
 PyroTGFork==2.1.32.15
 pyromod==1.5
 psutil==5.9.4
+selenium==4.20.0
 pytesseract
 Pillow
 TgCrypto
