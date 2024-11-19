@@ -1,3 +1,5 @@
+#𝘼𝙗𝙊𝙪𝙩𝙈𝙚_𝘿𝙆 ⚡
+
 import aiohttp
 import asyncio
 import requests
