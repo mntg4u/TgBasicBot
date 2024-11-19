@@ -19,16 +19,13 @@ async def download_file(file_url, original_filename):
                 else:
                     # Default filename if not found
                     filename = original_filename
-                
-                # Save the file with the original filename
                 with open(filename, "wb") as f:
                     while True:
                         chunk = await response.content.read(1024)
                         if not chunk:
                             break
-                        f.write(chunk)
-                
-                return filename  # Return the filename for sending later
+                        f.write(chunk)        
+                return filename 
             else:
                 raise Exception("Failed to download file.")
 
@@ -44,7 +41,8 @@ async def get_file_links_from_folder(folder_link):
                     if "/file/d/" in href:
                         file_id = href.split("/file/d/")[1].split("/")[0]
                         download_url = f"https://drive.google.com/uc?id={file_id}"
-                        links.append((download_url, a.text))  # Append download URL and filename
+                        filename = a.text.strip() 
+                        links.append((download_url, filename))
                 return links
             else:
                 raise Exception("Failed to access the folder.")
@@ -63,14 +61,22 @@ async def handle_drive_link(client, message):
             upload_message = await message.reply("<code>Trying to Upload...</code>")
             if "folders/" in link:
                 file_links = await get_file_links_from_folder(link)
+                if not file_links:
+                    await message.reply("<code>❌ No files found in this folder.</code>")
+                    return                
                 for file_url, filename in file_links:
-                    local_filename = await download_file(file_url, filename)  # Use original filename
-                    await client.send_document(chat_id=message.chat.id, document=local_filename)
+                    local_filename = filename 
+                    await download_file(file_url, local_filename)
+                    thumb = "https://envs.sh/5UR.jpg"
+                    caption = "<b><i>© @ExamVault</i></b>"
+                    await client.send_document(chat_id=message.chat.id, document=local_filename, thumb=thumb, caption=caption)
             elif "/file/d/" in link:
                 file_url = await handle_individual_file(link)
                 if file_url:
-                    local_filename = await download_file(file_url, link.split("/")[-1])  # Use the last part of the link as filename
-                    await client.send_document(chat_id=message.chat.id, document=local_filename)
+                    local_filename = await download_file(file_url, link.split("/")[-1]) 
+                    thumb = "https://envs.sh/5UR.jpg"
+                    caption = "<b><i>© @ExamVault</i></b>"
+                    await client.send_document(chat_id=message.chat.id, document=local_filename, thumb=thumb, caption=caption)
             await upload_message.delete()
             await message.reply("<code>Files Uploading completed ✅</code>")
         except Exception as e:
