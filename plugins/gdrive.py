@@ -62,7 +62,7 @@ async def handle_drive_link(client, message):
             if "folders/" in link:
                 file_links = await get_file_links_from_folder(link)
                 if not file_links:
-                    await message.reply("<code>❌ No files found in this folder.</code>")
+                    await message.reply("<code>❌ Folder Links can't be processed.</code>")
                     return                
                 for file_url, filename in file_links:
                     local_filename = filename 
