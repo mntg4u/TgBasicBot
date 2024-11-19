@@ -31,7 +31,7 @@ async def download_file(drive_link):
             else:
                 raise Exception("Failed to download file.")
 
-@app.on_message(filters.command("upload"))
+@Bot.on_message(filters.command("upload"))
 async def upload_file(client, message):
     # Check if the command has the required argument
     if len(message.command) < 2:
