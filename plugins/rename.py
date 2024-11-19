@@ -3,7 +3,7 @@ import asyncio
 from bot import Bot
 from pyrogram import Client, filters
 
-@Bot.on_message(filters.document)
+@Client.on_message(filters.document)
 async def handle_document(client, message):
     # When a document is sent, ask for the new name
     await message.reply("Please send the new file name (without extension).")
