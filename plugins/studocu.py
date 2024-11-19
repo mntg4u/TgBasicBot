@@ -86,4 +86,4 @@ async def upload_studocu(client, message):
         await message.reply("<code>File Uploaded successfully ✅</code>")
         
     except Exception as e:
-        await message.reply(f"<code>An error occurred: {str(e)}</code>")
+        await message.reply(f"An error occurred: {str(e)}")
