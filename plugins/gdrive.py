@@ -69,14 +69,14 @@ async def handle_drive_link(client, message):
                     await download_file(file_url, local_filename)
                     thumb = "https://envs.sh/5UR.jpg"
                     caption = "<b><i>© @ExamVault</i></b>"
-                    await client.send_document(chat_id=message.chat.id, document=local_filename, thumb=thumb, caption=caption)
+                    await client.send_document(chat_id=message.chat.id, document=local_filename)
             elif "/file/d/" in link:
                 file_url = await handle_individual_file(link)
                 if file_url:
                     local_filename = await download_file(file_url, link.split("/")[-1]) 
                     thumb = "https://envs.sh/5UR.jpg"
                     caption = "<b><i>© @ExamVault</i></b>"
-                    await client.send_document(chat_id=message.chat.id, document=local_filename, thumb=thumb, caption=caption)
+                    await client.send_document(chat_id=message.chat.id, document=local_filename)
             await upload_message.delete()
             await message.reply("<code>Files Uploading completed ✅</code>")
         except Exception as e:
