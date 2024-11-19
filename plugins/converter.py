@@ -9,7 +9,7 @@ async def convert_to_pdf(downloaded_file):
         return None
     output_file = f"{os.path.splitext(downloaded_file)[0]}.pdf"
     try:
-        subprocess.run(['libreoffice', '--headless', '--convert-to', 'pdf', input_file, '--outdir', os.path.dirname(output_file)], check=True)
+        subprocess.run(['libreoffice', '--headless', '--convert-to', 'pdf', downloaded_file, '--outdir', os.path.dirname(output_file)], check=True)
         return output_file
     except subprocess.CalledProcessError as e:
         print(f"Error during conversion: {e}")
