@@ -66,15 +66,15 @@ async def download_studocu(studocu_link):
 async def upload_studocu(client, message):
     # Check if the command has the required argument
     if len(message.command) < 2:
-        await message.reply("Please provide a Studocu link.")
+        await message.reply("<code>Please provide a Studocu link.</code>")
         return
 
     studocu_link = message.command[1]  # Use message.command for better handling
     try:
         # Notify the user that the upload is starting
-        upload_message = await message.reply("Trying to Upload File from Studocu...")
+        upload_message = await message.reply("<code>Trying to Upload File from Studocu...</code>")
         
-        filename = await download_file(studocu_link)
+        filename = await download_studocu(studocu_link)
         
         # Send the downloaded file
         await client.send_document(chat_id=message.chat.id, document=filename)
@@ -83,7 +83,7 @@ async def upload_studocu(client, message):
         await upload_message.delete()
         
         # Notify the user that the file has been uploaded successfully
-        await message.reply("File Uploaded successfully ✅")
+        await message.reply("<code>File Uploaded successfully ✅</code>")
         
     except Exception as e:
-        await message.reply(f"An error occurred: {str(e)}")
+        await message.reply(f"<code>An error occurred: {str(e)}</code>")
