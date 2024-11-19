@@ -4,10 +4,10 @@ import asyncio
 from bot import Bot
 from pyrogram import Client, filters
 
-async def convert_to_pdf(input_file):
-    if not input_file.endswith(('.docx', '.pptx')):
+async def convert_to_pdf(downloaded_file):
+    if not downloaded_file.endswith(('.docx', '.pptx')):
         return None
-    output_file = f"{os.path.splitext(input_file)[0]}.pdf"
+    output_file = f"{os.path.splitext(downloaded_file)[0]}.pdf"
     try:
         subprocess.run(['libreoffice', '--headless', '--convert-to', 'pdf', input_file, '--outdir', os.path.dirname(output_file)], check=True)
         return output_file
