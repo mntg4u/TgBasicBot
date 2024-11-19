@@ -2,6 +2,7 @@ PyroTGFork==2.1.32.15
 pyromod==1.5
 psutil==5.9.4
 selenium==4.20.0
+webdriver-manager==3.8.5
 pytesseract
 Pillow
 TgCrypto
