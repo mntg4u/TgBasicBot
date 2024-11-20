@@ -75,9 +75,8 @@ async def handle_drive_link(client, message):
                 if file_url:
                     local_filename = await download_file(file_url, link.split("/")[-1]) 
                     thumb = "https://envs.sh/5UR.jpg"
-                    caption = "<b><i>© @ExamVault</i></b>"
-                    await client.send_document(chat_id=message.chat.id, document=local_filename)
+                    caption = "<b><i>File Uploaded Successfully ✅</i></b>"
+                    await client.send_document(chat_id=message.chat.id, document=local_filename, caption=caption)
             await upload_message.delete()
-            await message.reply("<code>Files Uploading completed ✅</code>")
         except Exception as e:
             await message.reply("<code>❌ Invalid Google Drive link. Please provide a valid file or folder link!</code>")
