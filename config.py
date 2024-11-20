@@ -21,7 +21,7 @@ PORT = os.environ.get("PORT", "8080")
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #bot token
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6075431113:AAFV62rWzPN4PRIhGQN1Q6xaFYJ1b7lmR0U")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "7572076027:AAG2_9cz5jItaszpa7RgmiQQOVVCe78e94M")
 
 def LOGGER(name: str) -> logging.Logger:
     return logging.getLogger(name)
