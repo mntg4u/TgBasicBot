@@ -10,29 +10,29 @@ from pyrogram.enums import ParseMode
 import sys
 from datetime import datetime
 
-from config import API_HASH, APP_ID, LOGGER, TG_BOT_WORKERS, PORT, BOT_TOKEN
+from config import API_HASH, API_ID, LOGGER, BOT_WORKERS, PORT, BOT_TOKEN
     
 class Bot(Client):
     def __init__(self):
         super().__init__(
             name="Bot",
             api_hash=API_HASH,
-            api_id=APP_ID,
+            api_id=API_ID,
             bot_token=BOT_TOKEN,
             plugins={
                 "root": "plugins"
             },
-            workers=TG_BOT_WORKERS
+            workers=BOT_WORKERS
         )
         self.LOGGER = LOGGER
 
     async def start(self):
         await super().start()
-        print("Bot is AcTiVe!")
+        print("𝘼𝙗𝙊𝙪𝙩𝙈𝙚_𝘿𝙆 ⚡")
         usr_bot_me = await self.get_me()
         self.uptime = datetime.now()
         self.set_parse_mode(ParseMode.HTML)
-        self.LOGGER(__name__).info(f"Bot is AcTiVe!")
+        self.LOGGER(__name__).info(f"𝘼𝙗𝙊𝙪𝙩𝙈𝙚_𝘿𝙆 ⚡")
        
         #web-response
         app = web.AppRunner(await web_server())
