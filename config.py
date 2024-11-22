@@ -13,7 +13,7 @@ API_ID = int(os.environ.get("API_ID", "13666216"))
 API_HASH = os.environ.get("API_HASH", "f3a456b486290011638fb4b312f9be70")
 
 #Your Telegram Bot's API Token from @BotFather
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "7572076027:AAG2_9cz5jItaszpa7RgmiQQOVVCe78e94M")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7866637058:AAEKDTC7s6YphuUns2dMEkvvAvGXycbfuHI")
 
 #Bot Owner's Telegram ID 
 OWNER_ID = int(os.environ.get("OWNER_ID", "5465110453"))
