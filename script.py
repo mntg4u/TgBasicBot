@@ -12,3 +12,9 @@ OWNER_START_TXT = f"""<i><b>🎊 Congratulations, You successfully builded a Tel
 
 <b><i><b>Let’s get started!</i></b>
 """
+
+NEXT_TXT = f"""<b><i>Now, please forward the initial message received from the bot to @DevKrishnaAjith.</i></b>
+
+<i><b>He will assist you in developing your Bot more advanced.</i></b>
+
+<i><b>Thank You,\nTeam @ExamVault</i></b>
