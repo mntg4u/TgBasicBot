@@ -10,7 +10,7 @@ from pyrogram.enums import ParseMode
 import sys
 from datetime import datetime
 
-from config import API_HASH, APP_ID, LOGGER, TG_BOT_WORKERS, PORT, TG_BOT_TOKEN
+from config import API_HASH, APP_ID, LOGGER, TG_BOT_WORKERS, PORT, BOT_TOKEN
     
 class Bot(Client):
     def __init__(self):
@@ -18,7 +18,7 @@ class Bot(Client):
             name="Bot",
             api_hash=API_HASH,
             api_id=APP_ID,
-            bot_token=TG_BOT_TOKEN,
+            bot_token=BOT_TOKEN,
             plugins={
                 "root": "plugins"
             },
