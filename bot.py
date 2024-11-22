@@ -28,7 +28,7 @@ class Bot(Client):
 
     async def start(self):
         await super().start()
-        print("𝘼𝙗𝙊𝙪𝙩𝙈𝙚_𝘿𝙆 ⚡")
+        print("Now, go to telegram and start your Bot\nA suprise is waiting for you there 😍")
         usr_bot_me = await self.get_me()
         self.uptime = datetime.now()
         self.set_parse_mode(ParseMode.HTML)
