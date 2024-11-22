@@ -17,7 +17,7 @@ contact_btn = [
 
 @Bot.on_callback_query(filters.regex(r'^next$'))
 async def next_cbq(client: Client, query: CallbackQuery):
-    await query.message.send_message(
+    await client.send_message(
         chat_id = query.message.chat.id,
         text = NEXT_TXT,
         reply_markup = InlineKeyboardMarkup(contact_btn),
