@@ -8,6 +8,9 @@ ABOUT_TXT = f"""<b><i>@tgBaSiCbOt is an Open Source project made by <a href='htt
 
 START_TXT = f"""<i><b>🎊 Congratulations, You successfully builded a Telegram Bot!! 🥳</i></b>
 
-<i><b>Are you ready to turn your brilliant bot idea into reality? You’ve taken the first step by reading this! Now, let’s turn that vision into a tangible, powerful tool. We’re here to support you every step of the way, from initial concept to final deployment. Together, we’ll build something amazing. Let’s get started!</i></b>
+<i>Are you ready to turn your brilliant bot idea into reality? You’ve taken the first step by reading this! Now, let’s turn that vision into a tangible, powerful tool.</i>
 
+<i> <a href='https://t.me/ExamVault'>We're</a></b> here to support you every step of the way, from initial concept to final deployment. Together, we’ll build something amazing.</i>
+
+<b><i><b>Let’s get started!</i></b>
 """
