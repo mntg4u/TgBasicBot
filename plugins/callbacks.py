@@ -11,7 +11,7 @@ from script import NEXT_TXT
 
 contact_btn = [
     [
-        InlineKeyboardButton(text = 'Reach out to him', url = 'https://t.me/DevKrishnaAjith')
+        InlineKeyboardButton(text = 'Click Here', url = 'https://t.me/tgBaSiCbOt')
     ]
 ]
 
