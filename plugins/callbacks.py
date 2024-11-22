@@ -5,7 +5,6 @@ from pyrogram import Client, enums, filters, __version__
 from pyrogram.enums import ParseMode
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from bot import Bot
-from config import OWNER_ID
 from script import NEXT_TXT
 
 contact_btn = [
