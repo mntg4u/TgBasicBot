@@ -1,3 +1,4 @@
+# © 𝘼𝙗𝙊𝙪𝙩𝙈𝙚_𝘿𝙆 🌿 
 
 from pyrogram import __version__
 
