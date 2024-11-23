@@ -1,3 +1,5 @@
+# © 𝘼𝙗𝙊𝙪𝙩𝙈𝙚_𝘿𝙆 🌿
+
 from aiohttp import web
 
 routes = web.RouteTableDef()
