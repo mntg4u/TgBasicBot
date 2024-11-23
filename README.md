@@ -34,11 +34,11 @@ Replace these with your actual values of
 - `BOT_TOKEN`
 - `OWNER_ID`
 
-**2. After deployment, follow the instructions that your bot shows. You'll be invited to join our developers group after the verification of your bot.**
+**2. After deployment, follow the instructions that your bot shows. You'll be invited to join our developer's group after the verification of your bot.**
 
 **3. Using [@tgBaSiCBot](https://t.me/tgBaSiCBot) you will be able to verify your bot once your deployment is successfully completed.**
 
-**4. Other institutions will be shared via our developers group, hope you'll join us soon.**
+**4. Other institutions will be shared via our developer's group, hope you'll join us soon.**
 
 ## Usage
 
