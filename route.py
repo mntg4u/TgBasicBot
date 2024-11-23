@@ -6,4 +6,4 @@ routes = web.RouteTableDef()
 
 @routes.get("/", allow_head=True)
 async def root_route_handler(request):
-    return web.json_response("Bot is AcTiVe!")
+    return web.json_response("tgBaSiCbOt is AcTiVe!")
