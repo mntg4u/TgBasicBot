@@ -40,10 +40,11 @@ To run the bot, use the following command:
 
 `python3 main.py`
 
-# For queries 
+## For queries 
 
 You can ask your doubts in our Support Chat : [@BaSiCBotChat](https://t.me/BaSiCBotChat)
 
+## Happy Deploying...
+
 **We hope this project will help those interested in building Telegram bots but don't know where to start. We're here to guide you. Let's build it together 🎉**
-**Thank You,**
-**Dev Krishna Ajith (Developer)**
+
