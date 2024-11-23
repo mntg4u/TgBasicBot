@@ -30,3 +30,8 @@ Replace these with your actual values of
 - `BOT_TOKEN`
 - `OWNER_ID`
 
+## Usage
+
+To run the bot, use the following command:
+
+`python3 main.py`
