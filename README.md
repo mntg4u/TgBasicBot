@@ -20,7 +20,7 @@
 I prefer deployment on [Seenode](https://seenode.com/) because currently it is a free server.
 Before proceeding to deployment first `FORK` this repository and appropriately fill your values in `config.py` file.
 
-**In `config.py` file:**
+**1. In `config.py` file:**
 
 - `PLACE_YOUR_TELEGRAM_API_ID` 
 - `PLACE_YOUR_TELEGRAM_API_HASH` 
@@ -33,6 +33,12 @@ Replace these with your actual values of
 - `API_HASH`
 - `BOT_TOKEN`
 - `OWNER_ID`
+
+**2. After deployment, follow the instructions that your bot shows. You'll be invited to join our developers group after the verification of your bot. 
+
+**3. Using [@tgBaSiCBot](https://t.me/tgBaSiCBot) you will be able to verify your bot once your deployment is successfully completed.
+
+**4. Other institutions will be shared via our developers group, hope you'll join us soon.
 
 ## Usage
 
