@@ -13,11 +13,22 @@
 
 # Deployment 
 
-**I prefer deployment on [Seenode](https://seenode.com/) because currently seenode is a free server.**
+**I prefer deployment on [Seenode](https://seenode.com/) because currently seenode is a free server. Before proceeding to deployment first `FORK` this repository and appropriately fill your values in `config.py` file**
 
-**Importantly, before proceeding to deployment `FORK` this repository and appropriately fill your values in `config.py`**
+**In `config.py` file:**
 
-- In `config.py` file : Replace `PLACE_YOUR_TELEGRAM_API_ID` , `PLACE_YOUR_TELEGRAM_API_HASH` , `PLACE_YOUR_TELEGRAM_BOT_API_TOKEN"` , `PLACE_YOUR_TELEGRAM_USER_ID` these with your actual `API_ID` , `API_HASH` , `BOT_TOKEN` , `OWNER_ID` .
+- `PLACE_YOUR_TELEGRAM_API_ID` 
+- `PLACE_YOUR_TELEGRAM_API_HASH` 
+- `PLACE_YOUR_TELEGRAM_BOT_API_TOKEN"` 
+- `PLACE_YOUR_TELEGRAM_USER_ID`
+
+Replace these with your actual values of
+
+- `API_ID`
+- `API_HASH`
+- `BOT_TOKEN`
+- `OWNER_ID`
+
 ## Table of Contents
 
 - [Installation](#installation)
