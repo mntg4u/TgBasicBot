@@ -1,8 +1,6 @@
 # [TG] BaSiC Bot
 
-## Description
-
-A simple python Telegram Bot based on pyrogram library! 
+**A simple python Telegram Bot based on pyrogram library!**
 
 ## Required Credentials 
 
@@ -10,6 +8,8 @@ A simple python Telegram Bot based on pyrogram library!
 - `API_HASH` : Get your API ID from my.telegram.org .
 - `BOT_TOKEN` : Get your Bot's API Token from @BotFather .
 - `OWNER_ID` : Get you Telegram account's UserID from @tgBaSiCBot .
+
+**Note: If you want to know more about these Credentials then check `@tgBaSiCbOt` on telegram!**
 
 ## Table of Contents
 
