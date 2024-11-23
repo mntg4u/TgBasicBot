@@ -13,8 +13,8 @@
 
 # Deployment 
 
-**I prefer deployment on [Seenode](https://seenode.com/) because currently it is a free server.** 
-**Before proceeding to deployment first `FORK` this repository and appropriately fill your values in `config.py` file.**
+I prefer deployment on [Seenode](https://seenode.com/) because currently it is a free server.
+Before proceeding to deployment first `FORK` this repository and appropriately fill your values in `config.py` file.
 
 **In `config.py` file:**
 
