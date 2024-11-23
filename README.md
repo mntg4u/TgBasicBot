@@ -1,6 +1,10 @@
 # [TG] BaSiC Bot
 
-**A simple python Telegram Bot based on pyrogram library!**
+**[@tgBaSiCBot](https://github.com/AbOutMeDK/tgBaSiCbOt) is a Project initiated by team [Exam Vault](https://t.me/ExamVault) to provide a comprehensive guide for those starting their journey in Telegram Bot development.**
+
+**This project offers a simplified Python repository to facilitate the development of a BaSiC Telegram bot. It provides a clear and accessible foundation for beginners and experienced developers alike.**
+
+**Want to build your own Telegram bot? Let's get started!**
 
 ## Required Credentials 
 
