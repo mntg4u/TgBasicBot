@@ -1,4 +1,4 @@
-#𝘼𝙗𝙊𝙪𝙩𝙈𝙚_𝘿𝙆 ⚡
+# © 𝘼𝙗𝙊𝙪𝙩𝙈𝙚_𝘿𝙆 ⚡
 
 from aiohttp import web
 from route import routes
