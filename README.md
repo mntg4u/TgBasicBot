@@ -1,10 +1,8 @@
-# Project Name
-
-![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)
+# [TG] BaSiC Bot
 
 ## Description
 
-A brief description of your project, its purpose, and what problems it solves. Include any relevant context or background information that will help users understand the project.
+A simple python Telegram Bot based on pyrogram library! 
 
 ## Features
 
