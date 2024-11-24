@@ -42,7 +42,7 @@ Replace these with your actual values of
 2. If you receive a message as your `/start` command reply, then your deployment was successful otherwise check the application log and you can ask your issues in our support group.
 3. If your deployment is successful then you can send request for the verification of your bot.
 4. Using [@tgBaSiCBot](https://t.me/tgBaSiCBot) you will be able to verify your bot once your deployment is successful.
-5. After the verification process, you'll be invited yo our Private group where access is only for who builded this bot.
+5. After the verification process, you'll be invited to our private group where access is only for who builded this bot.
 6. If you get the group link then you are ready to build Telegram Bots.
 7. We'll help you to modify or improve this BaSiC bot to an advanced version as per your idea.
  
