@@ -36,9 +36,9 @@ Replace these with your actual values of
 
 ## Are you a Beginner?
 
-**Then, You just simply fork the repository first edit `config.py` as mentioned above. After your deployment is completed:**
+**Then, You just simply fork the repository first, edit `config.py` as mentioned above. After your deployment is completed:**
 
-1. Check your Bot that you created from @BotFather .
+1. Check your bot that you created from @BotFather .
 2. If you receive a message as your `/start` command reply, then your deployment was successful otherwise check the application log and you can ask your issues in our support group.
 3. If your deployment is successful then you can send request for the verification of your bot.
 4. Using [@tgBaSiCBot](https://t.me/tgBaSiCBot) you will be able to verify your bot once your deployment is successful.
