@@ -20,7 +20,7 @@
 I prefer deployment on [Seenode](https://seenode.com/) because currently it is a free server.
 Before proceeding to deployment first `FORK` this repository and appropriately fill your values in `config.py` file.
 
-**1. In `config.py` file:**
+**In `config.py` file:**
 
 - `PLACE_YOUR_TELEGRAM_API_ID` 
 - `PLACE_YOUR_TELEGRAM_API_HASH` 
@@ -34,12 +34,18 @@ Replace these with your actual values of
 - `BOT_TOKEN`
 - `OWNER_ID`
 
-**2. After deployment, follow the instructions that your bot shows. You'll be invited to join our developer's group after the verification of your bot.**
+## Are you a Beginner?
 
-**3. Using [@tgBaSiCBot](https://t.me/tgBaSiCBot) you will be able to verify your bot once your deployment is successfully completed.**
+**Then, You just simply fork the repository first edit `config.py` as mentioned above. After your deployment is completed:**
 
-**4. Other institutions will be shared via our developer's group, hope you'll join us soon.**
-
+1. Check your Bot that you created from @BotFather .
+2. If you receive a message as your `/start` command reply, then your deployment was successful otherwise check the application log and you can ask your issues in our support group.
+3. If your deployment is successful then you can send request for the verification of your bot.
+4. Using [@tgBaSiCBot](https://t.me/tgBaSiCBot) you will be able to verify your bot once your deployment is successful.
+5. After the verification process, you'll be invited yo our Private group where access is only for who builded this bot.
+6. If you get the group link then you are ready to build Telegram Bots.
+7. We'll help you to modify or improve this BaSiC bot to an advanced version as per your idea.
+ 
 ## Usage
 
 To run the bot, use the following command:
