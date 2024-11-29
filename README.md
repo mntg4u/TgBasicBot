@@ -23,20 +23,36 @@ To begin, you will need the following credentials:
 
 ### Deployment
 
-We recommend deploying your bot on **[Seenode](https://seenode.com/)**, which currently offers free server options. Follow these steps to deploy your bot:
+We recommend deploying your bot on **[Render](https://render.com/)**, which offers a straightforward way to host your applications. Follow these steps to deploy your bot:
 
-1. **Fork the Repository**: Start by forking this repository to your own GitHub account.
-2. **Edit `config.py`**: Open the `config.py` file and replace the placeholders with your actual values:
-   - `PLACE_YOUR_TELEGRAM_API_ID` 
-   - `PLACE_YOUR_TELEGRAM_API_HASH` 
-   - `PLACE_YOUR_TELEGRAM_BOT_API_TOKEN` 
-   - `PLACE_YOUR_TELEGRAM_USER_ID`
+1. **Fork the Repository**: Start by forking this repository to your own GitHub account. You can do this by clicking the "Fork" button at the top right of the repository page on GitHub.
 
-   Replace these with your actual values for:
-   - `API_ID`
-   - `API_HASH`
-   - `BOT_TOKEN`
-   - `OWNER_ID`
+2. **Create a Render Account**: Go to [Render](https://render.com/) and sign up for a free account if you don’t have one already.
+
+3. **Connect Your GitHub Account**: After logging in to Render, navigate to the "Dashboard" and click on "New" > "Web Service". You will be prompted to connect your GitHub account. Follow the instructions to authorize Render to access your GitHub repositories.
+
+4. **Select Your Forked Repository**: Once your GitHub account is connected, you will see a list of your repositories. Select the forked repository of the BaSiC Bot.
+
+5. **Configure Your Service**:
+   - **Name**: Give your service a name.
+   - **Region**: Choose a region that is closest to your users.
+   - **Branch**: Select the branch you want to deploy (usually `main`).
+   - **Build Command**: Enter the command to install dependencies, typically `pip install -r requirements.txt`.
+   - **Start Command**: Enter the command to run your bot, typically `python3 main.py`.
+
+6. **Set Environment Variables**: In the "Environment" section, add the following environment variables with your actual values:
+   - `API_ID`: Place your Telegram API ID.
+   - `API_HASH`: Place your Telegram API Hash.
+   - `BOT_TOKEN`: Place your Bot's API Token.
+   - `OWNER_ID`: Place your Telegram account's UserID.
+
+7. **Deploy Your Bot**: Click the "Create Web Service" button to start the deployment process. Render will build and deploy your bot automatically.
+
+8. **Check Your Bot**: Once the deployment is complete, you can test your bot by sending the `/start` command in Telegram. If you receive a reply, your deployment was successful. If not, check the application logs for errors.
+
+---
+
+By following these steps, you can easily host your Telegram bot on Render and get it up and running quickly!
 
 ---
 
