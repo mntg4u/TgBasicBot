@@ -1,6 +1,6 @@
 # [TG] BaSiC Bot
 
-**[@tgBaSiCBot](https://github.com/AbOutMeDK/tgBaSiCbOt)** is an initiative by the **[Exam Vault](https://t.me/ExamVault)** team, designed to provide a comprehensive and user-friendly guide for anyone looking to start their journey in Telegram Bot development.
+**[@tgBaSiCBot](https://github.com/AbOutMeDK/tgBaSiCbOt)** is an initiative by the **Exam Vault** team, designed to provide a comprehensive and user-friendly guide for anyone looking to start their journey in Telegram Bot development.
 
 This project features a simplified Python repository that serves as a solid foundation for both beginners and experienced developers interested in creating their own Telegram bots.
 
