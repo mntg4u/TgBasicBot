@@ -23,7 +23,7 @@ To begin, you will need the following credentials:
 
 ### Deployment
 
-We recommend deploying your bot on **[Render](https://render.com/)**, which offers a straightforward way to host your applications. Follow these steps to deploy your bot:
+We recommend deploying your bot on **[Render](https://render.com/)**, which offers application to be hosted for free. Follow these steps to deploy your bot:
 
 1. **Fork the Repository**: Start by forking this repository to your own GitHub account. You can do this by clicking the "Fork" button at the top right of the repository page on GitHub.
 
@@ -36,8 +36,8 @@ We recommend deploying your bot on **[Render](https://render.com/)**, which offe
 5. **Configure Your Service**:
    - **Name**: Give your service a name.
    - **Region**: Choose a region that is closest to your users.
-   - **Branch**: Select the branch you want to deploy (usually `main`).
-   - **Build Command**: Enter the command to install dependencies, typically `pip install -r requirements.txt`.
+   - **Branch**: Select the branch you want to deploy (`main`).
+   - **Build Command**: Enter the command to install dependencies, `pip install -r requirements.txt`.
    - **Start Command**: Enter the command to run your bot, typically `python3 main.py`.
 
 6. **Set Environment Variables**: In the "Environment" section, add the following environment variables with your actual values:
@@ -58,9 +58,9 @@ By following these steps, you can easily host your Telegram bot on Render and ge
 
 ## Are You a Beginner?
 
-If you're new to Telegram bot development, follow these steps after forking the repository and editing `config.py`:
+If you're new to Telegram bot development, follow these steps after the successful deployment:
 
-1. **Check Your Bot**: Verify the bot you created using @BotFather.
+1. **Check Your Bot**: Test the bot you created using @BotFather.
 2. **Test the `/start` Command**: If you receive a reply, your deployment was successful. If not, check the application log for errors and feel free to ask for help in our support group.
 3. **Request Verification**: If your deployment is successful, you can request verification for your bot.
 4. **Verify Your Bot**: Use [@tgBaSiCBot](https://t.me/tgBaSiCBot) to verify your bot once deployment is confirmed.
