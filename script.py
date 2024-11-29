@@ -21,7 +21,7 @@ NEXT_TXT = f"""<b><i>Now, please forward the initial message received from the b
 <i><b>Thank You,\nTeam @ExamVault</i></b>
 """
 
-USER_START_TXT = f"""<b><i>Want to build your own Telegram bot? Let's get started!</b></i>
+USER_START_TXT = f"""<b><i>Are you Intrested to Build your own Telegram bot? Let's get started!</b></i>
 
 <b><i>@tgBaSiCbOt is a Project initiated by Team <a href='https://t.me/examVault'>Exam Vault</a> to provide a comprehensive guide for those starting their journey in Telegram Bot development.</i></b>
 
