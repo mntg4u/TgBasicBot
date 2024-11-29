@@ -60,13 +60,12 @@ By following these steps, you can easily host your Telegram bot on Render and ge
 
 If you're new to Telegram bot development, follow these steps after the successful deployment:
 
-1. **Check Your Bot**: Test the bot you created using @BotFather.
-2. **Test the `/start` Command**: If you receive a reply, your deployment was successful. If not, check the application log for errors and feel free to ask for help in our support group.
-3. **Request Verification**: If your deployment is successful, you can request verification for your bot.
-4. **Verify Your Bot**: Use [@tgBaSiCBot](https://t.me/tgBaSiCBot) to verify your bot once deployment is confirmed.
-5. **Join the Private Group**: After verification, you will be invited to a private group for bot builders.
-6. **Get Ready to Build**: If you receive the group link, you are set to start building Telegram bots.
-7. **Receive Support**: Our team is here to assist you in modifying or enhancing your BaSiC bot to an advanced version based on your ideas.
+1. **Test your Bot**: Test your bot by sending the `/start` command in Telegram. If you receive a reply, your deployment was successful. If not, check the application log for errors and feel free to ask for help in our support group.
+2. **Request Verification**: If your deployment is successful, you can request verification for your bot.
+3. **Verify Your Bot**: Use [@tgBaSiCBot](https://t.me/tgBaSiCBot) to verify your bot once deployment is confirmed.
+4. **Join the Private Group**: After verification, you will be invited to a private group for bot builders.
+5. **Get Ready to Build**: If you receive the group link, you are set to start building Telegram bots.
+6. **Receive Support**: Our team is here to assist you in modifying or enhancing your BaSiC bot to an advanced version based on your ideas.
 
 ---
 
