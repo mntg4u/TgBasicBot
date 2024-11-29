@@ -23,7 +23,7 @@ NEXT_TXT = f"""<b><i>Now, please forward the initial message received from the b
 
 USER_START_TXT = f"""<b><i>Want to build your own Telegram bot? Let's get started!</b></i>
 
-<b><i><a href='https://github.com/AbOutMeDK/tgBaSiCbOt'>@tgBaSiCbOt</a> is a Project initiated by Team <a href='https://t.me/examVault'>Exam Vault</a> to provide a comprehensive guide for those starting their journey in Telegram Bot development.</i></b>
+<b><i>@tgBaSiCbOt is a Project initiated by Team <a href='https://t.me/examVault'>Exam Vault</a> to provide a comprehensive guide for those starting their journey in Telegram Bot development.</i></b>
 
 <b><i>This project offers a simplified Python repository to facilitate the development of a BaSiC Telegram bot. It provides a clear and accessible foundation for beginners and experienced developers alike.</b></i>
 
