@@ -48,7 +48,7 @@ We recommend deploying your bot on **[Render](https://render.com/)**, which offe
 
 8. **Check Your Bot**: Once the deployment is complete, you can test your bot by sending the `/start` command in Telegram. If you receive a reply, your deployment was successful. If not, check the application logs for errors.
 
-## Add a Monitor in UptimeRobot
+### Add a Monitor in UptimeRobot
 
 To keep the Render application alive, follow these steps to add a monitor in UptimeRobot:
 
@@ -64,7 +64,7 @@ To keep the Render application alive, follow these steps to add a monitor in Upt
 
 4. **Configure Monitor Settings**
    - **Friendly Name**: Enter a name for your monitor that helps you identify it.
-   - **URL or IP Address**: Input the URL or IP address of the service you want to monitor.
+   - **URL or IP Address**: Input the URL or IP address of the service you want to monitor (Your Render application link).
    - **Monitoring Interval**: Set how often you want UptimeRobot to check the status (minimum interval is 5 minutes for free accounts).
    - **Alert Contacts**: Select the alert contacts that should be notified if the monitor goes down.
 
