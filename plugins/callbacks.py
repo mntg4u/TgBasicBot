@@ -11,7 +11,7 @@ from script import NEXT_TXT
 
 tgBaSiCbot_btn = [
     [
-        InlineKeyboardButton(text = 'Click Here', url = 'https://t.me/tgBaSiCbOt')
+        InlineKeyboardButton(text = 'Verify My Bot', url = 'https://t.me/tgBaSiCbOt?start=help')
     ]
 ]
 
