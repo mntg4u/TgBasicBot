@@ -60,7 +60,7 @@ To keep the Render application alive, follow these steps to add a monitor in Upt
 
 3. **Add a New Monitor**
    - Click on the **"+ Add New Monitor"** button located on the left side of the dashboard.
-   - Choose the type of monitor you want to create (e.g., HTTP(s), Keyword, Ping, etc.).
+   - Choose the type of monitor you want to create (Choose HTTP(s).).
 
 4. **Configure Monitor Settings**
    - **Friendly Name**: Enter a name for your monitor that helps you identify it.
@@ -68,17 +68,13 @@ To keep the Render application alive, follow these steps to add a monitor in Upt
    - **Monitoring Interval**: Set how often you want UptimeRobot to check the status (minimum interval is 5 minutes for free accounts).
    - **Alert Contacts**: Select the alert contacts that should be notified if the monitor goes down.
 
-5. **Advanced Settings (Optional)**
-   - For Keyword monitors, specify the keyword to check for and the condition (e.g., "Keyword Exists" or "Keyword Not Exists").
-   - Configure any additional settings as needed.
-
-6. **Save the Monitor**
+5. **Save the Monitor**
    - After filling in all the necessary information, click on the **"Create Monitor"** button to save your settings.
 
-7. **Monitor Status**
+6. **Monitor Status**
    - Your new monitor will now appear in the dashboard, and you can view its status and performance metrics.
 
-8. **Testing the Monitor**
+7. **Testing the Monitor**
    - Use the **Test Notification** feature to ensure alerts are working correctly.
 ---
 
