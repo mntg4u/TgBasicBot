@@ -14,10 +14,10 @@ CMD = [ "/" , "!" , "." ]
 
 user_start_btn = [
     [
-        InlineKeyboardButton(text = 'Source Code 🔥', url = 'https://github.com/AbOutMeDK/tgBaSiCbOt')
+        InlineKeyboardButton(text = 'Bot Updates', url = 'https://t.me/mnbots')
     ],
     [
-        InlineKeyboardButton(text = 'Support Group 🎉', url = 'https://t.me/BasicBotChat')
+        InlineKeyboardButton(text = 'Support', url = 'https://t.me/mnbots_support')
     ]
 ]
 
