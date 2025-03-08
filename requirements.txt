@@ -4,3 +4,8 @@ psutil==5.9.4
 TgCrypto
 requests
 aiohttp
+pytesseract
+Pillow
+pyrofork
+aiohttp
+pytz
