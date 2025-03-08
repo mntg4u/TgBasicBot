@@ -1,45 +1,63 @@
-# © 𝘼𝙗𝙊𝙪𝙩𝙈𝙚_𝘿𝙆 🪐
+import json
+import pytesseract
+from PIL import Image
+from io import BytesIO
+from pyrogram import Client, filters
+from pyrogram.types import Message
 
-import os
-import re
-import asyncio
-from pyrogram import Client, enums, filters, __version__
-from pyrogram.enums import ParseMode
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-from bot import Bot
-from config import OWNER_ID
-from script import USER_START_TXT , OWNER_START_TXT
+# File to store user data
+USER_DATA_FILE = "users.json"
+ADMIN_ID = 123456789  # Replace with your Telegram user ID
 
-CMD = [ "/" , "!" , "." ]
+# Function to load user data
+def load_users():
+    try:
+        with open(USER_DATA_FILE, "r") as file:
+            return json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
 
-user_start_btn = [
-    [
-        InlineKeyboardButton(text = 'Bot Updates', url = 'https://t.me/mnbots')
-    ],
-    [
-        InlineKeyboardButton(text = 'Support', url = 'https://t.me/mnbots_support')
-    ]
-]
+# Function to save user data
+def save_users(users):
+    with open(USER_DATA_FILE, "w") as file:
+        json.dump(users, file, indent=4)
 
-owner_start_btn = [
-    [
-        InlineKeyboardButton(text = 'What to Do Next?', callback_data = "next")
-    ]
-]
+# Track users
+@Client.on_message(filters.command("start") & filters.private)
+async def start_command(client, message: Message):
+    user_id = str(message.from_user.id)
+    users = load_users()
 
-@Bot.on_message(filters.command("start", CMD) & filters.private)
-async def start_msg(client: Client, message: Message):
-    if message.from_user.id == OWNER_ID:
-        await message.reply(
-            text=OWNER_START_TXT,
-            quote=True,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(owner_start_btn)
-        )
-    else:
-        await message.reply(
-            text=USER_START_TXT,
-            quote=True,
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(user_start_btn)
-        )
+    if user_id not in users:
+        users[user_id] = {
+            "username": message.from_user.username or "N/A",
+            "first_name": message.from_user.first_name,
+            "last_name": message.from_user.last_name or "N/A"
+        }
+        save_users(users)
+
+    await message.reply_text("📸 Send me an image, and I'll extract text from it!")
+
+# Extract text from image
+@Client.on_message(filters.photo)
+async def extract_text(client, message: Message):
+    photo = message.photo
+    file_path = await client.download_media(photo.file_id)
+
+    try:
+        image = Image.open(file_path)
+        text = pytesseract.image_to_string(image)
+
+        if text.strip():
+            await message.reply_text(f"📝 **Extracted Text:**\n\n{text}")
+        else:
+            await message.reply_text("❌ No text found in the image.")
+    except Exception as e:
+        await message.reply_text(f"⚠️ Error: {e}")
+
+# Admin command to check total users
+@Client.on_message(filters.command("stats") & filters.user(ADMIN_ID))
+async def stats_command(client, message: Message):
+    users = load_users()
+    total_users = len(users)
+    await message.reply_text(f"📊 **Total Users:** {total_users}")
